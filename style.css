@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+}
+
+:root{
+    --blue: #023bbf;
+    --white: #eeeeee;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--blue);
+}
+
+#uploader-files .wrapper{
+    max-width: 272px;
+    width: auto;
+    max-height: 240px;
+    height: 90%;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background-color: var(--white);
+}
+
+#uploader-files .wrapper header{
+    color: var(--blue);
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#uploader-files .wrapper form{
+    height: 90px;
+    border: 2px dotted var(--blue);
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    flex-direction: column;
+    margin: 6px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#uploader-files .wrapper form :where(i,p){
+    color: var(--blue);
+}
+
+#uploader-files .wrapper form i{
+    font-size: 3rem;
+    opacity: .75rem;
+} 
+
+#uploader-files .wrapper form p{
+    font-size: 1rem;
+    margin-top: 15px;
+} 
+#uploader-files .wrapper section{
+    margin-bottom: 24px;
+}
+
+#uploader-files .wrapper section .linha{
+    background-color: #dedede;
+    list-style: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#uploader-files .wrapper section .linha i{
+    font-size: 1rem;
+    color: var(--blue);
+}
+
+#uploader-files .wrapper section .details span{
+    font-size: .75rem;
+}
+
+#uploader-files .wrapper .progress-area .linha .conteudo{
+    width: 100%;
+    margin-left: 15px;
+}
+
+#uploader-files .wrapper .progress-area .details{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    justify-content: space-between;
+}
+
+#uploader-files .wrapper .progress-area .progress-bar{
+    height: 4px;
+    width: 100%;
+    background-color: var(--white);
+    margin-bottom: 4px;
+    border-radius: 30px;
+}
+
+#uploader-files .wrapper .progress-area .progress-bar .progress{
+    height: 100%;
+    width: 50%;
+    background-color: var(--blue);
+    border-radius: inherit;
+}
+
+#uploader-files .wrapper .uploaded-area .linha .conteudo{
+    display: flex;
+    align-items: center;
+}
+
+#uploader-files .wrapper .uploaded-area .linha .details{
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+}
+
+#uploader-files .wrapper .uploaded-area .details .size{
+    font-size: .5rem;
+    color: #404040;
+}
+
+#uploader-files .wrapper .uploaded-area .fa-check{
+    font-size: .9rem;
+    color: var(--blue);
+}
