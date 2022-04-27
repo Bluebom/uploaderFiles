@@ -71,9 +71,59 @@ function updateThumbnail(form,file){
 }
 
 
+function uploadFile(fileName, nameUpload, file, progressArea, uplodedArea){
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "php/upload.php");
+  xhr.upload.addEventListener("progress", ({loaded, total}) =>{
+            console.log(loaded,total);
+            let fileLoaded = Math.floor((loaded/total)*100);
+            let fileTotal = Math.floor(total/1000);
+            let fileSize;
+            (fileSize < 1024**2) ? fileSize = `${fileTotal} KB` : fileSize = (loaded / (1024**2)).toFixed(2) + " MB";
+            let progressHtml = `
+            <li class="linha">
+                <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                <div class="conteudo">
+                    <div class="details">
+                        <span class="name">${fileName}</span>
+                        <span class="percent">${fileLoaded}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: ${fileLoaded}%;"></div>
+                    </div>
+                </div>
+            </li>`;
+            uplodedArea.innerHTML = '';
+            uplodedArea.style.position = 'absolute';
+            progressArea.style.position = 'static';
+            progressArea.innerHTML = progressHtml;
+            if(loaded == total){
+                progressArea.innerHTML = '';
+                progressArea.style.position = 'absolute';
+                uplodedArea.style.position = 'static';
+                let uploadedHtml = `
+                <li class="linha">
+                    <div class="conteudo">
+                        <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                        <div class="details">
+                            <span class="name">${fileName}</span>
+                            <span class="size">${fileSize}</span>
+                        </div>
+                    </div>
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                </li>
+                `;
+                uplodedArea.innerHTML = uploadedHtml;
+            }
+  });
+  let formData = new FormData();
+  formData.append('file',file, nameUpload);
+  xhr.send(formData);
+}
+
 
 // Upload file
-function uploadFile(fileName, nameUpload, file, progressArea, uplodedArea){
+function uploadFile2(fileName, nameUpload, file, progressArea, uplodedArea){
     let formData = new FormData();
     formData.append('file',file, nameUpload);
     console.log(nameUpload);
