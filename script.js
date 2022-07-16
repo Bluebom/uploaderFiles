@@ -72,6 +72,7 @@ for(let i = 1; i < 7; i++){
 /** Atualiza a Thumb para mostra uma miniatura da imagem ou indicar pdf */
 function updateThumbnail(form,file){
     form.querySelector('.bi-cloud-arrow-up').style.display = 'none';
+    form.style.borderStyle = 'solid';
     if(file.type !== 'application/pdf'){
         form.style.backgroundImage = `url('${URL.createObjectURL(file)}')`
     }else{
@@ -90,15 +91,15 @@ function uploadFile(fileName, nameUpload, file, progressArea, uplodedArea){
             let fileSize;
             (fileSize < 1024**2) ? fileSize = `${fileTotal} KB` : fileSize = (loaded / (1024**2)).toFixed(2) + " MB";
             let progressHtml = `
-            <li class="linha">
-                <i class="bi-card-image"></i>
-                <div class="conteudo">
-                    <div class="details">
-                        <span class="name">${fileName}</span>
-                        <span class="percent">${fileLoaded}%</span>
+            <li class="linha list-group-item border-0 d-flex align-items-center py-2 px-3 justify-content-between rounded bg-dark bg-opacity-10">
+                <i class="bi-card-image fs-6 text-primary"></i>
+                <div class="conteudo w-100 ms-3">
+                    <div class="details d-flex align-items-center mb-2 justify-content-between">
+                        <span class="name small">${fileName}</span>
+                        <span class="percent small">${fileLoaded}%</span>
                     </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: ${fileLoaded}%;"></div>
+                    <div class="progress-bar w-100 bg-white mb-1 border-pill" style="height: 4px;">
+                        <div class="progress height-100 w-50 bg-primary border-pill" style="width: ${fileLoaded}%;"></div>
                     </div>
                 </div>
             </li>`;
@@ -111,15 +112,15 @@ function uploadFile(fileName, nameUpload, file, progressArea, uplodedArea){
                 progressArea.style.position = 'absolute';
                 uplodedArea.style.position = 'static';
                 let uploadedHtml = `
-                <li class="linha">
-                    <div class="conteudo">
-                        <i class="bi-card-image"></i>
-                        <div class="details">
-                            <span class="name">${fileName}</span>
-                            <span class="size">${fileSize}</span>
+                <li class="linha list-group-item border-0 d-flex align-items-center py-2 px-3 justify-content-between rounded bg-dark bg-opacity-10">
+                    <div class="conteudo d-flex align-items-center">
+                        <i class="bi-card-image fs-6 text-primary"></i>
+                        <div class="details d-flex ms-3 flex-column">
+                            <span class="name small">${fileName}</span>
+                            <span class="size text-dark text-opacity-75" style="font-size:.6rem;">${fileSize}</span>
                         </div>
                     </div>
-                    <i class="fs-4 bi-cloud-check"></i>
+                    <i class="fs-4 text-primary bi-cloud-check"></i>
                 </li>
                 `;
                 uplodedArea.innerHTML = uploadedHtml;
@@ -148,7 +149,7 @@ function uploadFile2(fileName, nameUpload, file, progressArea, uplodedArea){
             let fileSize;
             (fileSize < 1024**2) ? fileSize = `${fileTotal} KB` : fileSize = (loaded / (1024**2)).toFixed(2) + " MB";
             let progressHtml = `
-            <li class="linha">
+            <li class="linha list-group-item border-0 d-flex align-items-center justify-content-between rounded">
                 <i class="fa fa-file-image-o" aria-hidden="true"></i>
                 <div class="conteudo">
                     <div class="details">
@@ -169,9 +170,9 @@ function uploadFile2(fileName, nameUpload, file, progressArea, uplodedArea){
                 progressArea.style.position = 'absolute';
                 uplodedArea.style.position = 'static';
                 let uploadedHtml = `
-                <li class="linha">
+                <li class="linha list-group-item border-0 d-flex align-items-center justify-content-between rounded bg-dark py-2 px-3 text-dark bg-opacity-10">
                     <div class="conteudo">
-                        <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                        <i class="fa fa-file-image-o fs-6 text-primary" aria-hidden="true"></i>
                         <div class="details">
                             <span class="name">${fileName}</span>
                             <span class="size">${fileSize}</span>
