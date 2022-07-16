@@ -5,95 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container" id="uploader-files">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="wrapper" id="wrap01">
-                    <header>RG Frente</header>
-                    <form identificador="rg-frente" action="#">
-                        <input type="file" name="file" class="file-input" accept="image/*, .pdf" hidden>
-                        <i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                    </form>
-                    <section class="progress-area"></section>
-                    <section class="uploaded-area">
-                    </section>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="wrapper" id="wrap02">
-                    <header>RG Verso</header>
-                    <form identificador="rg-verso" action="#">
-                        <input type="file" name="file" class="file-input" accept="image/*, .pdf" hidden>
-                        <i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                    </form>
-                    <section class="progress-area"></section>
-                    <section class="uploaded-area">
-                    </section>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="wrapper" id="wrap03">
-                    <header>CPF</header>
-                    <form identificador="cpf" action="#">
-                        <input type="file" name="file" class="file-input" accept="image/*, .pdf" hidden>
-                        <i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                    </form>
-                    <section class="progress-area"></section>
-                    <section class="uploaded-area">
-                    </section>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="wrapper" id="wrap04">
-                    <header>C. Residência</header>
-                    <form identificador="comp-residencia" action="#">
-                        <input type="file" name="file" class="file-input" accept="image/*, .pdf" hidden>
-                        <i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                    </form>
-                    <section class="progress-area"></section>
-                    <section class="uploaded-area">
-                    </section>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="wrapper" id="wrap05">
-                    <header>Cartão frente</header>
-                    <form identificador="cartao-frente" action="#">
-                        <input type="file" name="file" class="file-input" accept="image/*, .pdf" hidden>
-                        <i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                    </form>
-                    <section class="progress-area"></section>
-                    <section class="uploaded-area">
-                    </section>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="wrapper" id="wrap06">
-                    <header>Cartão verso</header>
-                    <form identificador="cartao-verso" action="#">
-                        <input type="file" name="file" class="file-input" accept="image/*, .pdf" hidden>
-                        <i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                    </form>
-                    <section class="progress-area"></section>
-                    <section class="uploaded-area">
-                    </section>
-                </div>
-            </div>
-            
+<div class="container" id="uploader-files">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-12 h-100 text-center position-relative" id="wrap01">
+            <header class="mb-2">RG Frente</header>
+            <form action="#"
+                  class="border-primary text-primary mb-3 mx-auto d-flex align-items-center justify-content-center"
+                  style="cursor: pointer;border: 2px dotted;background-repeat: no-repeat;background-position: center;
+                  background-size: cover; max-width: 300px; height: 190px;">
+                <input type="file" name="file[rg-frente]" class="file-input" accept="image/*, .pdf" hidden>
+                <i class="fs-1 bi-cloud-arrow-up"></i>
+            </form>
+            <section class="progress-area mb-3 mx-auto" style="max-width: 300px;"></section>
+            <section class="uploaded-area mb-3 mx-auto" style="max-width: 300px;">
+            </section>
         </div>
+        <div class="col-lg-4 col-md-6 col-12 h-100 text-center position-relative" id="wrap02">
+            <header class="mb-2">RG Verso</header>
+            <form action="#"
+                  class="border-primary text-primary mb-3 mx-auto d-flex align-items-center justify-content-center"
+                  style="cursor: pointer;border: 2px dotted;background-repeat: no-repeat;background-position: center;
+                  background-size: cover; max-width: 300px; height: 190px">
+                <input type="file" name="file[rg-verso]" class="file-input" accept="image/*, .pdf" hidden>
+                <i class="fs-1 bi-cloud-arrow-up"></i>
+            </form>
+            <section class="progress-area mb-3 mx-auto" style="max-width: 300px;"></section>
+            <section class="uploaded-area mb-3 mx-auto" style="max-width: 300px;">
+            </section>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 h-100 text-center position-relative" id="wrap03">
+            <header class="mb-2">CPF</header>
+            <form action="#"
+                  class="border-primary text-primary mb-3 mx-auto d-flex align-items-center justify-content-center"
+                  style="cursor: pointer;border: 2px dotted;background-repeat: no-repeat;background-position: center;
+                  background-size: cover; max-width: 300px; height: 190px">
+                <input type="file" name="file[cpf]" class="file-input" accept="image/*, .pdf" hidden>
+                <i class="fs-1 bi-cloud-arrow-up"></i>
+            </form>
+            <section class="progress-area mb-3 mx-auto" style="max-width: 300px;"></section>
+            <section class="uploaded-area mb-3 mx-auto" style="max-width: 300px;">
+            </section>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 h-100 text-center position-relative" id="wrap04">
+            <header class="mb-2">C. Residência</header>
+            <form action="#"
+                  class="border-primary text-primary mb-3 mx-auto d-flex align-items-center justify-content-center"
+                  style="cursor: pointer;border: 2px dotted;background-repeat: no-repeat;background-position: center;
+                  background-size: cover; max-width: 300px; height: 190px">
+                <input type="file" name="file[comp-residencia]" class="file-input" accept="image/*, .pdf" hidden>
+                <i class="fs-1 bi-cloud-arrow-up"></i>
+            </form>
+            <section class="progress-area mb-3 mx-auto" style="max-width: 300px;"></section>
+            <section class="uploaded-area mb-3 mx-auto" style="max-width: 300px;">
+            </section>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 h-100 text-center position-relative" id="wrap05">
+            <header class="mb-2">Cartão frente</header>
+            <form action="#"
+                  class="border-primary text-primary mb-3 mx-auto d-flex align-items-center justify-content-center"
+                  style="cursor: pointer;border: 2px dotted;background-repeat: no-repeat;background-position: center;
+                  background-size: cover; max-width: 300px; height: 190px">
+                <input type="file" name="file[cartao-frente]" class="file-input" accept="image/*, .pdf" hidden>
+                <i class="fs-1 bi-cloud-arrow-up"></i>
+            </form>
+            <section class="progress-area mb-3 mx-auto" style="max-width: 300px;"></section>
+            <section class="uploaded-area mb-3 mx-auto" style="max-width: 300px;">
+            </section>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 h-100 text-center position-relative" id="wrap06">
+            <header class="mb-2">Cartão verso</header>
+            <form action="#"
+                  class="border-primary text-primary mb-3 mx-auto d-flex align-items-center justify-content-center"
+                  style="cursor: pointer;border: 2px dotted;background-repeat: no-repeat;background-position: center;
+                  background-size: cover; max-width: 300px; height: 190px">
+                <input type="file" name="file[cartao-verso]" class="file-input" accept="image/*, .pdf" hidden>
+                <i class="fs-1 bi-cloud-arrow-up"></i>
+            </form>
+            <section class="progress-area mb-3 mx-auto" style="max-width: 300px;"></section>
+            <section class="uploaded-area mb-3 mx-auto" style="max-width: 300px;">
+            </section>
+        </div>
+
     </div>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+</div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+<script src="./script.js"></script>
 </body>
 </html>
